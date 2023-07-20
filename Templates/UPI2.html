@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UPI Payment</title>
+    <style>
+        body {
+            background-color: #161b24;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        .payment-container {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .payment-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .payment-description {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .payment-button {
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #000;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .payment-button:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <h1 class="payment-title">UPI Payment</h1>
+        <h1 class="upi-address">auspicious54321@oksbi</h1>
+        <h1 class="total-amount">Total amount is {{total1}} Rs</h1>
+        <p class="payment-description">Click the button below to proceed with the payment</p>
+        <button class="payment-button" onclick="makePayment()">Pay Now</button>
+    </div>
+
+    <script>
+        function makePayment() {
+            // Add your payment processing logic here
+            alert("If payment is successfull, Laundry get informed");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Profile</title>
+  <style>
+    /* CSS styling for the profile page */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #161b24;
+      color: black;
+    }
+
+    .profile-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-picture {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #512DA8;
+      font-size: 72px;
+      color: #fff;
+      text-align: center;
+      line-height: 150px;
+      margin: 0 auto; /* Align profile picture to center */
+      margin-bottom: 10px;
+      
+    }
+
+    .profile-info {
+      margin-bottom: 10px;
+      text-color : white;
+      text-align: left; /* Align other content to left */
+    }
+
+    .profile-info label {
+      font-weight: bold;
+
+    }
+
+    .profile-info span {
+      margin-left: 5px;
+      text-color : white;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #dcdcde;
+    }
+
+    img {
+      max-width: 190px;
+      max-height: 190px;
+      border-radius: 50%;
+    }
+    .change-photo-button {
+      padding: 5px;
+      background-color: #161b24;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    h1{
+      color : white
+    }
+  </style>  
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-picture" id="profileImage"></div>
+    <div class="profile-info">
+      <label>Username:</label>
+      <span>{{ entry.0.username }}</span>
+    </div>
+    <div class="profile-info">
+      <label>Name:</label>
+      <span>{{ entry.0.first_name }} {{ entry.0.last_name }}</span>
+    </div>
+    <div class="profile-info">
+      <label>Email:</label>
+      <span>{{ entry.0.email }}</span>
+    </div>
+    <div class="profile-info">
+      <label>Date of Join:</label>
+      <span>{{ entry.0.date_joined }}</span>
+    </div>
+  </div>
+</body>
+<head>
+<body>
+    <h1>Till Now</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Time</th>
+                <th>Shirt</th>
+                <th>Pants</th>
+                <th>Jeans</th>
+                <th>Towel</th>
+                <th>Shirt's Image</th>
+                <th>Pant's Image</th>
+                <th>Jean's Image</th>
+                <th>Towel's Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items%}
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.time}}</td>
+                <td>{{item.shirt}}</td>
+                <td>{{item.Pants}}</td>
+                <td>{{item.Jeans}}</td>
+                <td>{{item.Towel}}</td>
+                {% if item.shirt_image %}
+                <td><img src="{{item.shirt_image.url}}" alt=""></td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                {% if item.Pants_image %}
+                <td><img src="{{item.Pants_image.url}}" alt=""></td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                {% if item.Jeans_image %}
+                <td><img src="{{item.Jeans_image.url}}" alt=""></td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                {% if item.Towel_image %}
+                <td><img src="{{item.Towel_image.url}}" alt=""></td>
+                {% else %}
+                <td></td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        var firstName = '{{ entry.0.first_name }}';
+        var lastName = '{{ entry.0.last_name }}';
+        var initials = firstName.charAt(0).toUpperCase() + lastName.charAt(0).toUpperCase();
+        $('#profileImage').text(initials);
+      });
+    </script>
+</body>
+</head>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Profile</title>
+  <style>
+    /* CSS styling for the profile page */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #161b24;
+      color: black;
+    }
+
+    .profile-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-picture {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #512DA8;
+      font-size: 72px;
+      color: #fff;
+      text-align: center;
+      line-height: 150px;
+      margin: 0 auto; /* Align profile picture to center */
+      margin-bottom: 10px;
+    }
+
+    .profile-info {
+      margin-bottom: 10px;
+      text-align: left; /* Align other content to left */
+    }
+
+    .profile-info label {
+      font-weight: bold;
+    }
+
+    .profile-info span {
+      margin-left: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    img {
+      max-width: 190px;
+      max-height: 190px;
+      border-radius: 50%;
+    }
+    
+    h1{
+      color: white;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      var firstName = '{{ entry.0.first_name }}';
+      var lastName = '{{ entry.0.last_name }}';
+      var initials = firstName.charAt(0).toUpperCase() + lastName.charAt(0).toUpperCase();
+      $('#profileImage').text(initials);
+    });
+  </script>
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-picture" id="profileImage"></div>
+    <div class="profile-info">
+      <label>Username:</label>
+      <span>{{ entry.0.username }}</span>
+    </div>
+    <div class="profile-info">
+      <label>Name:</label>
+      <span>{{ entry.0.first_name }} {{ entry.0.last_name }}</span>
+    </div>
+    <div class="profile-info">
+      <label>Email:</label>
+      <span>{{ entry.0.email }}</span>
+    </div>
+    <div class="profile-info">
+      <label>Date of Join:</label>
+      <span>{{ entry.0.date_joined }}</span>
+    </div>
+  </div>
+</body>
+<head>
+<body>
+    <h1>Till Now</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Time</th>
+                <th>Jacket</th>
+                <th>Blazer</th>
+                <th>Hoodie</th>
+                <th>Blanket</th>
+                <th>Jacket's Image</th>
+                <th>Blazer's Image</th>
+                <th>Hoodie's Image</th>
+                <th>Blanket's Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items%}
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.time}}</td>
+                <td>{{item.Jacket}}</td>
+                <td>{{item.Blazer}}</td>
+                <td>{{item.Hoodie}}</td>
+                <td>{{item.Blanket}}</td>
+                {% if item.jacket_image %}
+                <td><img src="{{item.jacket_image.url}}" alt=""></td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                {% if item.blazer_image %}
+                <td><img src="{{item.blazer_image.url}}" alt=""></td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                {% if item.hoodie_image %}
+                <td><img src="{{item.hoodie_image.url}}" alt=""></td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                {% if item.blanket_image %}
+                <td><img src="{{item.blanket_image.url}}" alt=""></td>
+                {% else %}
+                <td></td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</head>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Page</title>
+    <style>
+        body {
+            background-color: #161b24;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2C3E50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        section {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center; /* change from justify-content: flex-start; */
+          align-items: center;
+          padding: 20px;
+      }
+
+        .card {
+            background-color: #fff;
+            border-radius: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 50px;
+            width: 140px;
+            transition: all .3s;
+            transform: translateY(0);
+            position: relative;
+        }
+
+        .card img {
+            border-radius: 50%;
+            height: 200px;
+            margin: 0 auto;
+            position: relative;
+            top: -100px;
+            width: 200px;
+            z-index: 1;
+            border: 20px solid #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card::before {
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background: linear-gradient(to bottom right, #D9AFD9, #97D9E1);
+            content: "";
+            height: 100%;
+            left: 0;
+            opacity: .9;
+            position: absolute;
+            top: 0;
+            transition: all .3s;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .card:hover {
+            box-shadow: 0 30px 60px -10px rgba(0, 0, 0, .3);
+            transform: translateY(-20px);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .card h1 {
+            font-size: 36px;
+            margin-top: 80px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #444;
+        }
+
+        .card p {
+            font-size: 24px;
+            margin-top: 10px;
+            text-align: center;
+            color: #78909C;
+            line-height: 1.5;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Co-Founders</h1>
+    </header>
+    <section>
+        <div class="card">
+            <img src="{% static 'Developer 1.jpeg' %}" alt="Profile Picture">
+            <h1>Bhavesh</h1>
+            <p>FrontEnd Developer</p>
+
+        </div>
+
+        <div class="card">
+            <img src="{% static 'Developer 2.jpeg' %}" alt="Profile Picture">
+            <h1>Adavit</h1>
+            <p>BackEnd Developer</p>
+   
+        </div>
+        <div class="card">
+            <img src="{% static 'Developer 3.jpeg' %}" alt="Profile Picture">
+            <h1>Aditya</h1>
+            <p>BackEnd Developer</p>
+
+        </div>
+
+        <div class="card">
+            <img src="{% static 'Developer 4.jpeg' %}" alt="Profile Picture">
+            <h1>Anuj</h1>
+            <p>FrontEnd Developer</p>
+
+        </div>
+
+        <div class="card">
+            <img src="{% static 'Developer 5.jpeg' %}" alt="Profile Picture">
+            <h1>Abhishek</h1>
+            <p>FrontEnd Developer</p>
+        </div>
+    </section>
+</body>
+</head>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Laundry Website</title>
+  <link rel="stylesheet" href="contactus.css">
+</head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #161b24; /* Ocean Black background color */
+  color: #fff;
+}
+
+header {
+  background-color: #1f1f1f;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav li.active a {
+  color: #ffd700;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background-color: #333; /* Dark gray input background color */
+  color: #fff;
+}
+
+button[type="submit"] {
+  background-color: #ffd700; /* Golden yellow submit button background color */
+  color: #161b24; /* Ocean black submit button text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-info {
+  color: #ccc; /* Light gray contact information color */
+}
+
+.contact-info h3 {
+  margin-top: 0;
+}
+
+.contact-info ul {
+  padding: 0;
+  list-style: none;
+}
+
+.contact-info ul li {
+  margin-bottom: 10px;
+}
+
+.contact-info ul li i {
+  margin-right: 10px;
+}
+
+footer {
+  background-color: #1f1f1f;
+  color: #ccc;
+  text-align: center;
+  padding: 10px;
+}
+</style>
+<body>
+  <header>
+    <h1>Laundry Website</h1>
+    <nav>
+      <ul>
+        <li><a href="welcome.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="price.html">Pricing</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form action="/contactus.html" method="post">
+        {% csrf_token %}
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+        <button class="submit-button" onclick="submission()">Submit</button>
+      </form>
+      <script>
+        function submission() {
+          // Add your payment processing logic here
+          alert("Your message is submitted. Thanks for submitting!");
+        }
+      </script>
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> IIT Jodhpur</li>
+          <li><i class="fas fa-phone"></i> 555-123-4567</li>
+          <li><i class="fas fa-envelope"></i> info@laundrywebsite.com</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 Our Laundry Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>

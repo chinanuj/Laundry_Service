@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #05253e;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 20px;
+        border-bottom: none;
+        backdrop-filter: blur(5px);
+        position: sticky;
+        top: 0;
+        z-index: 999;
+      }
+
+      h1 {
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+
+      form {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 400px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      input[type="submit"],
+      a.register-button {
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: rgba(0, 0, 0, 0.1);
+        color: #fff;
+      }
+
+      input[type="submit"],
+      a.register-button {
+        margin-top: 20px;
+        background-color: #ff9800;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover,
+      a.register-button:hover {
+        background-color: #ffac33;
+      }
+
+      footer {
+        background-color: rgba(0, 0, 0, 0.9);
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+      a {
+        color: #ff9800;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: #ffac33;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .register-button {
+        margin-top: 10px;
+        background-color: #1976d2;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Laundry World</h1>
+    </header>
+    <form id="fcf-form-id" class="fcf-form-class" method="Post" action="login">
+      {% csrf_token %}
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter username" required />
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" required />
+      <div class="button-container">
+        <input type="submit" value="Log In" />
+        <a href="register" class="register-button">Register</a>
+      </div>
+    </form>
+    <footer>
+      <p>© 2023 Laundry World</p>
+    </footer>
+  </body>
+</html>

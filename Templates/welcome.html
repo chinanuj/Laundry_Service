@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <title>Welcome to Our Laundry Website</title>
+  <style>
+   
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #161b24;
+      color: #fff;
+    }
+
+    h1,
+    h2,
+    p {
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+
+    /* Header */
+    header {
+      background-color: #161b24;
+      color: #fff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    nav ul {
+      display: flex;
+      font-size: 1.5rem;
+    }
+
+    nav li {
+      margin-right: 40px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff5722;
+    }
+
+    .circle {
+      background-color: #fff;
+      margin-top: -5%;
+      margin-left: 90%;
+      padding-top: 0%;
+      height: 85px;
+      width: 85px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .circle:hover {
+      transform: rotate(360deg);
+    }
+
+    /* Hero Section */
+    .hero {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 150px 20px;
+      text-align: center;
+      font-size: 35px;
+      color: #50;
+    }
+
+    .cta {
+      display: inline-block;
+      background-color: #ff5722;
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 40px;
+      margin-top: 20px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta:hover {
+      background-color: #333;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav li {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      .circle {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero {
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="welcome.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="price.html">Pricing</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+    <a href="clothselection/index1.html">
+      <div class="circle">
+        <img src="{% static 'dp2.png' %}" alt="Profile Picture">
+      </div>
+    </a>
+    <div class="hero">
+      <h1>Hi {{name}}</h1>
+      <h2>Welcome to<br>IITJ Laundry Services</h2>
+      <p>Let us take care of your laundry so you can focus on the things that matter most to you.</p>
+      <a href="services.html" class="cta">Get Started</a>
+    </div>
+  </header>
+
+
+  <footer>
+    <p>© 2023 Our Laundry Website</p>
+  </footer>
+
+</body>
+
+</html>

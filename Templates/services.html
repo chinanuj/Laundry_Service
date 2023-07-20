@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Our Services | Laundry World</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #161b24; /* Added an ocean black background color */
+        color: #eee;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        bbackground-color: #161b24;
+        padding: 20px;
+        border-bottom: 1px solid #ddd;
+      }
+      h1 {
+        margin: 0;
+        font-size: 36px;
+        color: #fff; /* Changed the color of heading to white */
+      }
+      nav {
+        background-color: #2f3e5c; /* Changed the navbar's background color to a midnight blue (#2f3e5c) */
+        padding: 10px;
+      }
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      nav ul li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+      nav ul li a {
+        color: #eee; /* Changed the color of navbar links to white */
+        text-decoration: none;
+        padding: 5px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease; /* Added a hover transition effect to navbar links */
+      }
+      nav ul li a:hover {
+        background-color: #333; /* Changed the color of the navbar link on hover to #333 */
+      }
+      .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 410px;
+        width: 410px;
+        padding: 20px;
+        margin: 20px;
+        background-color: #2f3e5c;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        text-align: center;
+      }
+      h2 {
+        margin-top: 0;
+        font-size: 26px;
+        color: #fff; /* Adjusted the font-size and color of the h2 tags */
+      }
+      .service-icon {
+        margin-bottom: 20px;
+        filter: grayscale(100%) brightness(150%); /* Adding a grayscale filter and increasing brightness of image */
+        transition: filter 0.3s ease; /* Added grayscale filter transition effect */
+      }
+      .service-icon:hover {
+        filter: grayscale(0%) brightness(100%); /* Removing grayscale filter on section hover */
+      }
+      .btn {
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: #fff;
+        color: #333; /* Changed the button text color to black (#333) */
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .btn:hover {
+        background-color: #333;
+        color: #fff; /* Changed the button text color to white on hover */
+      }
+      footer {
+        background-color: #333;
+        color: #eee;
+        padding: 10px;
+        text-align: center;
+      }
+      .access {
+        text-align: center;
+        text-decoration: none;
+        font-size: 24px; /* Decreased the font size of the access box text */
+        font-weight: 1000;
+        height: 300px;
+        width: 300px;
+        margin: 40px 20px;
+        background-color: #2f3e5c;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      }   
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Laundry World</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="welcome.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="price.html">Pricing</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="wrapper">
+      <section>
+        <h2>Washing Machine</h2>
+        <img src="{% static 'WM.png' %}" height="300" width="300" alt="Washing Machine" class="service-icon">
+        <p>Quality wash</p>
+      </section>
+      <section>
+        <h2>Dry Cleaning</h2>
+        <img src="{% static 'DC.png' %}" height="300" width="300" alt="Dry Cleaning" class="service-icon">
+        <p>Exceeding Expectations</p>
+      </section>
+      <section>
+        <h2>Storage Area</h2>
+        <img src="{% static 'SA.png' %}" height="300" width="300" alt="Storage Area" class="service-icon">
+        <p>Highly Systematic</p>
+      </section>
+      <div class="access">
+        <a href="price.html" class="btn">Click here to access our services</a> 
+      </div>      
+    </div>
+    <footer>
+      <p>© 2023 Laundry World. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

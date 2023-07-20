@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+    <style>
+        /* CSS styles for the profile page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .profile-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .profile-info {
+            margin-bottom: 10px;
+        }
+
+        .profile-info label {
+            font-weight: bold;
+        }
+
+        .profile-info span {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <img class="profile-picture" src="Jeans.jpg" alt="Profile Picture">
+        <div class="profile-info">
+            <label>Name:</label>
+            <span>John Doe</span>
+        </div>
+        <div class="profile-info">
+            <label>Age:</label>
+            <span>30</span>
+        </div>
+        <div class="profile-info">
+            <label>Email:</label>
+            <span>johndoe@example.com</span>
+        </div>
+        <div class="profile-info">
+            <label>Location:</label>
+            <span>New York</span>
+        </div>
+    </div>
+</body>
+<head>
+    <title>Till now</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        img {
+            max-width: 190px;
+            max-height: 190px;
+        }
+    </style>
+</head>
+<head>
+<body>
+    <h1>Table with CSS Styles</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Time</th>
+                <th>Shirt</th>
+                <th>Pants</th>
+                <th>Jeans</th>
+                <th>Towel</th>
+                <th>Shirt's Image</th>
+                <th>Pant's Image</th>
+                <th>Jean's Image</th>
+                <th>Towel's Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if items%}
+            <tr>
+                <td>{{items.id}}</td>
+                <td>{{items.time}}</td>
+                <td>{{items.shirt}}</td>
+                <td>{{items.Pants}}</td>
+                <td>{{items.Jeans}}</td>
+                <td>{{items.Towel}}</td>
+                <td><img src="{{items.shirt_image.url}}" alt=""></td>
+                <td><img src="{{items.Pants_image.url}}" alt=""></td>
+                <td><img src="{{items.Jeans_image.url}}" alt=""></td>
+                <td><img src="{{items.Towel_image.url}}" alt=""></td>
+                
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+</body>
+</head>
+</html>

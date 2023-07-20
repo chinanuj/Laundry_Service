@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Laundry Page</title>
+   <style>
+        body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+header {
+   background-color: #4CAF50;
+   color: white;
+   padding: 20px;
+   text-align: center;
+}
+
+main {
+   margin: 20px;
+}
+
+form {
+   border: 2px solid #4CAF50;
+   padding: 20px;
+}
+
+fieldset {
+   border: none;
+}
+
+legend {
+   font-size: 24px;
+   font-weight: bold;
+   margin-bottom: 10px;
+}
+
+.item {
+   display: flex;
+   align-items: center;
+   margin-bottom: 10px;
+}
+
+img {
+   width: 100px;
+   height: 100px;
+   margin-right: 20px;
+   object-fit: cover;
+}
+
+label {
+   font-size: 18px;
+   font-weight: bold;
+   margin-right: 10px;
+}
+
+input[type="number"] {
+   width: 50px;
+   padding: 5px;
+   border: none;
+   border-radius: 5px;
+   background-color: #f1f1f1;
+   margin-right: 10px;
+}
+
+input[type="submit"] {
+   background-color: #4CAF50;
+   color: white;
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+footer  {
+   background-color: #f1f1f1;
+   color: #4CAF50;
+   text-align: center;
+   padding: 10px;
+}
+input[type="file"]{
+   color: green;
+   border: 2px solid black;
+   border-radius: 8px;
+   font-weight: 1000;
+}
+
+    </style>
+</head>
+<body>
+   <header>
+      <h1>Laundry Service</h1>
+   </header>
+   <main>
+      <form id="fcf-form-id" class="fcf-form-class" method="post" action="index1.html" enctype="multipart/form-data">
+          {% csrf_token %}
+      <label for="mq_username">Shirt:</label>
+      <input type="number" id="mq_username" name="shirt">
+      <label for="mqq_username">Towel:</label>
+      <input type="number" id="mqq_username" name="towel">
+      <label for="mw_password">Pant:</label>
+      <input type="number" id="mw_password" name="pants">
+            <label for="mww_password">Jeans:</label>
+      <input type="number" id="mww_password" name="jeans">
+         <label for="im">Image</label>
+         <input class="m_upl" type="file" id="im"  name="uplshirt" accept="image/*" multiple>
+         <input type="submit" value="Submit">
+    </form>
+
+   </main>
+   <footer>
+      <p>&copy; 2023 Laundry Service</p>
+   </footer>
+</body>
+</html>
+
