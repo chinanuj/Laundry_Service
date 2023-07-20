@@ -57,3 +57,14 @@ For paids cloths pay on the account given( *_hidden currently_* ) given below ac
 The user can able to see his previous listing.
 ![Index](https://github.com/Advaitgaur004/Laundry_Service/assets/126783821/7cb705c0-5950-41ba-8f7f-da33c2315d7f)
 
+Currently there is many things to be implemented such as
+- [ ] Integrating Paytm
+- [ ] API integration
+- [ ] Changes in User Profile 
+- [ ] Accepting multiple images in the database
+
+## Contribution
+#### Advait Gaur Mostly Contributed to the backend part using Django
+#### Bhavesh Aswani Mostly Contributed to the frontend part using HTML, CSS, JavaScript
+#### Aditya Kedia Contributed to the backend part using Django
+#### Anuj Chincholikar Contributed to the frontend part using HTML, CSS, JavaScript
