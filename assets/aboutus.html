@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="aboutus.css">
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  header {
+    background-color: #1f1f1f;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 50px;
+  }
+  
+  section {
+    margin-bottom: 50px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .team-member {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-right: 20px
+  }
+  footer{
+    text-align: center;
+  }
+</style> 
+<body>
+  {% csrf_token %}
+  <header>
+    <h1>About Us</h1>
+    <nav>
+      <ul>
+        <li><a href="welcome.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="price.html">Pricing</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="team">
+      <h2>Meet Our Team</h2>
+      <div class="team-members">
+        <div class="team-member">
+          <img src="" alt="Developer 1">
+          <h3>Bhavesh Aswani</h3>
+          <p>Front-end Developer</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum malesuada interdum. Suspendisse et faucibus velit, nec gravida nisi.</p>
+        </div>
+        <div class="team-member">
+          <img src="advait.jpeg" alt="Developer 2">
+          <h3>Advait Gaur</h3>
+          <p>Back-end Developer</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum malesuada interdum. Suspendisse et faucibus velit, nec gravida nisi.</p>
+        </div>
+        <div class="team-member">
+          <img src="developer3.jpg" alt="Developer 3">
+          <h3>Aditya Kedia</h3>
+          <p>Back-end Developer</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum malesuada interdum. Suspendisse et faucibus velit, nec gravida nisi.</p>
+        </div>
+        <div class="team-member">
+          <img src="developer3.jpg" alt="Developer 3">
+          <h3>Anuj Chincholikar</h3>
+          <p>Front-end Developer</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum malesuada interdum. Suspendisse et faucibus velit, nec gravida nisi.</p>
+        </div>
+        <div class="team-member">
+          <img src="developer3.jpg" alt="Developer 3">
+          <h3>Abhishek</h3>
+          <p>Front-end Developer</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum malesuada interdum. Suspendisse et faucibus velit, nec gravida nisi.</p>
+        </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 Our Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>
