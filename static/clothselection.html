@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Laundry Page</title>
+	<style>
+        body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #4CAF50;
+	color: white;
+	padding: 20px;
+	text-align: center;
+}
+
+main {
+	margin: 20px;
+}
+
+form {
+	border: 2px solid #4CAF50;
+	padding: 20px;
+}
+
+fieldset {
+	border: none;
+}
+
+legend {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+img {
+	width: 100px;
+	height: 100px;
+	margin-right: 20px;
+	object-fit: cover;
+}
+
+label {
+	font-size: 18px;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+input[type="number"] {
+	width: 50px;
+	padding: 5px;
+	border: none;
+	border-radius: 5px;
+	background-color: #f1f1f1;
+	margin-right: 10px;
+}
+
+input[type="submit"] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+footer  {
+	background-color: #f1f1f1;
+	color: #4CAF50;
+	text-align: center;
+	padding: 10px;
+}
+input[type="file"]{
+	color: green;
+	border: 2px solid black;
+	border-radius: 8px;
+	font-weight: 1000;
+}
+
+    </style>
+</head>
+<body>
+	<header>
+		<h1>Laundry Service</h1>
+	</header>
+	<main>
+		<form action="" method="post">
+			{% csrf_token %}
+			<fieldset>
+				<legend>Select Clothes</legend>
+				<div class="item">
+					<img src="shirt.jpg" alt="Shirt">
+					<label for="shirt">Shirt:</label>
+					<input type="number" id="shirt" name="shirt" min="0" max="10">
+					<input class="upl" type = "file" name = "uplshirt" accept = "image/*" multiple/>
+				</div>
+				<div class="item">
+					<img src="pants.jpg" alt="Pants">
+					<label for="pants">Pants:</label>
+					<input type="number" id="pants" name="pants" min="0" max="10">
+					<input class="upl" type = "file" name = "uplpant" accept = "image/*" multiple/>
+				</div>
+				<div class="item">
+					<img src="Jeans.jpg" alt="Jeans">
+					<label for="jeans">Jeans:</label>
+					<input type="number" id="jeans" name="jeans" min="0" max="10">
+					<input  class="upl" type = "file" name = "upljeans" accept = "image/*" multiple/>
+				</div>
+				<div class="item">
+					<img src="towel.jpg" alt="Towel">
+					<label for="towel">Towel:</label>
+					<input type="number" id="towel" name="towel" min="0" max="10">
+					<input class="upl" type = "file" name = "upltowel" accept = "image/*" multiple />
+				</div>
+			</fieldset>
+			<input type="submit" value="Submit">
+		</form>
+	</main>
+	<footer>
+		<p>&copy; 2023 Laundry Service</p>
+	</footer>
+</body>
+</html>
