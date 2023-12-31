@@ -59,9 +59,7 @@ The user can able to see his previous listing.
 
 Currently there is many things to be implemented such as
 - [ ] Integrating Paytm
-- [ ] API integration
 - [ ] Changes in User Profile 
-- [ ] Accepting multiple images in the database
 
 ## Contribution
 #### Advait Gaur Contributed to the backend part using Django
