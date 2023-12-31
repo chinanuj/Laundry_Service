@@ -16,7 +16,7 @@ The problem of paper wastage, time wastage, slips being lost for collecting clot
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![PyCharm](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green)
 
-## Some photographs of the final website made
+## Some pictures of the final website made
 ### Login
 This is the starting point of our website if you are a new user, just create a new entry in no time.
 ![login](https://github.com/Advaitgaur004/Laundry_Service/assets/126783821/211e2cf1-61ff-4615-8f1c-8935e011d94e)
