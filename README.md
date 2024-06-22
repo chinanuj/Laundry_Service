@@ -63,6 +63,6 @@ Currently there is many things to be implemented such as
 
 ## Contribution
 #### Advait Gaur Contributed to the backend part using Django
-#### Bhavesh Aswani Mostly Contributed to the frontend part using HTML, CSS, JavaScript
+#### Bhavesh Aswani Contributed to the frontend part using HTML, CSS, JavaScript
 #### Aditya Kedia Contributed to the backend part using Django
 #### Anuj Chincholikar Contributed to the frontend part using HTML, CSS, JavaScript
